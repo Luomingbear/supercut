@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000001"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/frameview"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.4"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <com.slwb.bannerview.ViewFlow
             android:id="@+id/viewflow"
@@ -23,14 +23,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="top"
             android:gravity="center"
-            android:padding="3dip" >
+            android:padding="3dip">
 
             <com.slwb.bannerview.CircleFlowIndicator
                 android:id="@+id/viewflowindic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|bottom"
-                android:padding="4dip"/>
+                android:padding="4dip" />
         </FrameLayout>
 
         <TextView
@@ -48,14 +48,14 @@
         android:layout_height="match_parent"
         android:layout_weight="0.5"
         android:gravity="center|center_horizontal"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-        	android:gravity="center|center_horizontal"
-            android:orientation="vertical" >
+            android:gravity="center|center_horizontal"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/newproject"
@@ -70,8 +70,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-        	android:gravity="center|center_horizontal"
-            android:orientation="vertical" >
+            android:gravity="center|center_horizontal"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/zimu"

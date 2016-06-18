@@ -85,6 +85,8 @@ public class WorkStation extends Activity implements SurfaceHolder.Callback {
             public void onClick(View source) {
                 // 创建需要启动的Activity对应的Intent
                 Intent f = new Intent(WorkStation.this, PersonInformation.class);
+
+                f.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 // 启动intent对应的Activity
                 startActivity(f);
             }

@@ -542,9 +542,9 @@ containing a value of this type.
         public static final int newproject=0x7f0a0009;
         public static final int ok=0x7f0a002b;
         public static final int password=0x7f0a000c;
-        public static final int password_zhuce=0x7f0a0010;
-        public static final int passwordcheck_zhuce=0x7f0a0011;
-        public static final int phone_zhuce=0x7f0a0012;
+        public static final int password_zhuce=0x7f0a0011;
+        public static final int passwordcheck_zhuce=0x7f0a0012;
+        public static final int phone_zhuce=0x7f0a0010;
         public static final int play=0x7f0a001d;
         public static final int postToActionBarFromMediaChooser=0x7f0a003c;
         public static final int realTabcontent=0x7f0a0003;

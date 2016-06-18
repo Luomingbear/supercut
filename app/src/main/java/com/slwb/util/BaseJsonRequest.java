@@ -72,8 +72,10 @@ public abstract class BaseJsonRequest<T> extends BaseRequest<T> {
             if (response.isSuccess) { // 获取信息成功
                 response.data = parseResponse(jsonResponse);
                 return response;
-            } else if (resultCode == 3) { // 获取信息失败，session过期
-//
+            } else if (resultCode == 10001) { // 获取信息失败，session过期
+
+                response.isSuccess = false;
+                return response;
 //                // 重新登录
 //                if (LoginRequest.reLogin(UserEntity.getName(), MD5Utils.toMd5(UserEntity.getPwd()))) { // 重新登录成功
 //                    // 重新连接服务
@@ -109,6 +111,5 @@ public abstract class BaseJsonRequest<T> extends BaseRequest<T> {
             response.errorMessage = "返回数据解析错误";
             return response;
         }
-        return null;
     }
 }

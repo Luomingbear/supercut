@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="35dp"
     android:layout_alignParentTop="true"
-    android:background="#1d1d1c" >
+    android:background="#1d1d1c">
 
     <ImageView
         android:id="@+id/backArrowImageViewFromMediaChooserHeaderView"

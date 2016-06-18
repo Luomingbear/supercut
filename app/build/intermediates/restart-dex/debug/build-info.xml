@@ -4,34 +4,42 @@
     api-level="22"
     density="xxhdpi"
     format="7"
-    timestamp="6155588085652" >
+    timestamp="23896494500946"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="188" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="836" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="4" />
     <task
         name="verifier"
         duration="0" />
 
     <artifact
-        location="/home/bear/AndroidStudioProjects/supercut/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
-        type="DEX" />
+        location="/home/bear/AndroidStudioProjects/supercut/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
-    <build timestamp="5950933805236" >
+    <build timestamp="23251595582109" >
         <artifact
             location="/home/bear/AndroidStudioProjects/supercut/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="6155588085652" >
+    <build timestamp="23824653246293" >
         <artifact
             location="/home/bear/AndroidStudioProjects/supercut/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="23896494500946"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/home/bear/AndroidStudioProjects/supercut/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

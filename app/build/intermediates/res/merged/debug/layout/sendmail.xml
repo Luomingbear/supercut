@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:background="#1a1a1a" >
+        android:background="#1a1a1a">
 
         <Button
             android:id="@+id/back_mail"
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="您的联系方式"
-        android:inputType="number" >
+        android:inputType="number">
 
     </EditText>
 
@@ -43,7 +43,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
-        android:hint="意见或建议" >
-    </EditText>
+        android:hint="意见或建议"></EditText>
 
 </LinearLayout>

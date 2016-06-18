@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/RelativeLayout1"
         android:layout_width="fill_parent"
         android:layout_height="35dp"
-        android:background="#1a1a1a" >
+        android:background="#1a1a1a">
 
         <Button
             android:id="@+id/back_workstation"
@@ -36,7 +36,7 @@
     <RelativeLayout
         android:id="@+id/relative_layout_head"
         android:layout_width="match_parent"
-        android:layout_height="110dp" >
+        android:layout_height="110dp">
 
         <TextView
             android:id="@+id/name"

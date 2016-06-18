@@ -62,6 +62,8 @@ public class PersonInformation extends Activity {
 
                 // 创建需要启动的Activity对应的Intent
                 Intent intent = new Intent(PersonInformation.this, Register.class);
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 // 启动intent对应的Activity
                 startActivity(intent);
             }

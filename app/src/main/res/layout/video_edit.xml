@@ -7,13 +7,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#1a1a1a"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/RelativeLayout1"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:background="#1a1a1a" >
+            android:background="#1a1a1a">
 
             <Button
                 android:id="@+id/back"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:background="#000000" >
+            android:background="#000000">
 
             <Button
                 android:id="@+id/play"
@@ -63,7 +63,7 @@
             android:id="@+id/RelativeLayout2"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:background="@drawable/gongjubeijing1" >
+            android:background="@drawable/gongjubeijing1">
 
             <Button
                 android:id="@+id/ok"
@@ -112,8 +112,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/thumbnailView"
-                    android:layout_gravity="center_vertical" >
-                </com.slwb.supercut.ThumbnailView>
+                    android:layout_gravity="center_vertical"></com.slwb.supercut.ThumbnailView>
 
             </LinearLayout>
 
