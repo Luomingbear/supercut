@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:theme="@style/concealTitle" >
         <activity
-            android:name="com.slwb.supercut.Home"
+            android:name="com.slwb.supercut.activity.Home"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -27,19 +27,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.slwb.supercut.MainWork" >
+        <activity android:name="com.slwb.supercut.activity.mainwork.MainWork" >
             android:screenOrientation="portrait"
         </activity>
-        <activity android:name="com.slwb.supercut.Login" >
+        <activity android:name="com.slwb.supercut.activity.Login" >
             android:screenOrientation="portrait"
         </activity>
-        <activity android:name="com.slwb.supercut.PersonInformation" >
+        <activity android:name="com.slwb.supercut.activity.PersonInformation" >
             android:screenOrientation="portrait"
         </activity>
-        <activity android:name="com.slwb.supercut.Register" >
+        <activity android:name="com.slwb.supercut.activity.Register" >
             android:screenOrientation="portrait"
         </activity>
-        <activity android:name="com.slwb.supercut.WorkStation" >
+        <activity android:name="com.slwb.supercut.activity.WorkStation" >
             android:screenOrientation="portrait"
         </activity>
         <activity android:name="com.slwb.supercut.SendEmailActivity" >

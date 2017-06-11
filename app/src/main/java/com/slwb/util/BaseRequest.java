@@ -18,7 +18,7 @@ BaseRequest<T> {
      * 网络请求的域名
      */
 
-    public static final String BASE_URL = "http://115.159.110.165:8002/";//
+    public static final String BASE_URL = "http://ssssssss";//
 
     /**
      * 网络请求的返回结果监听器

@@ -24,6 +24,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
+ * 视频条控件
  * Created by bear on 11/28/2015.
  */
 public class ThumbnailView extends View {
@@ -79,7 +80,7 @@ public class ThumbnailView extends View {
 
     //双手缩放
     private float oldDist, newDist;
-    private boolean isZoom = false;//是否需要缩放，当双指处于屏幕是打开
+    //    private boolean isZoom = false;//是否需要缩放，当双指处于屏幕是打开
     private int mode = 0;
     private float scale = 1;//缩放比例
 
@@ -97,7 +98,7 @@ public class ThumbnailView extends View {
     }
 
     //添加视频
-    void addVideo(String fileName) {
+    public void addVideo(String fileName) {
         //
         fileName = fileName.substring(1, fileName.length() - 1);
         videoFiles.add(fileName);
@@ -106,7 +107,7 @@ public class ThumbnailView extends View {
         thumbnailPicsCut.add(new PointF(0, thumbnailPictures.get(thumbnailPictures.size() - 1).getWidth()));
     }
 
-    void addVideo(List<String> fileName)//添加视频
+    public void addVideo(List<String> fileName)//添加视频
     {
         //
         int n = fileName.size();
@@ -337,15 +338,15 @@ public class ThumbnailView extends View {
             }
             break;
 
-            //当有多个手指触摸屏幕时执行
-            case MotionEvent.ACTION_POINTER_DOWN: {
-                mode += 1;
-                oldDist = spacing(event);
-                isZoom = true;
-                Log.e("oldDist:", oldDist + "");
-
-            }
-            break;
+//            //当有多个手指触摸屏幕时执行
+//            case MotionEvent.ACTION_POINTER_DOWN: {
+//                mode += 1;
+//                oldDist = spacing(event);
+//                isZoom = true;
+//                Log.e("oldDist:", oldDist + "");
+//
+//            }
+//            break;
 
             case MotionEvent.ACTION_POINTER_UP: {
                 mode -= 1;
@@ -497,7 +498,7 @@ public class ThumbnailView extends View {
             case MotionEvent.ACTION_UP: {
                 isDeletPressed = false;
                 mode = 0;
-                isZoom = false;
+//                isZoom = false;
                 //
                 startMoveX = false;
 
@@ -561,6 +562,9 @@ public class ThumbnailView extends View {
                 yTouch = -100;
             }
             break;
+
+            default:
+                break;
         }
 
 
@@ -586,6 +590,8 @@ public class ThumbnailView extends View {
 
                         onTimer(timeCurr);
 
+                        break;
+                    default:
                         break;
                 }
                 super.handleMessage(msg);

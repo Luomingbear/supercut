@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:theme="@style/concealTitle">
         <activity
-            android:name=".Home"
+            android:name=".activity.Home"
             android:label="@string/app_name" 
         	android:screenOrientation="portrait">
             <intent-filter>
@@ -26,19 +26,19 @@
             </intent-filter>
         </activity>
         <activity 
-            android:name=".MainWork">
+            android:name=".activity.mainwork.MainWork">
             android:screenOrientation="portrait"</activity>
         <activity 
-            android:name=".Login">
+            android:name=".activity.Login">
             android:screenOrientation="portrait"</activity>
         <activity 
-            android:name=".PersonInformation">
+            android:name=".activity.PersonInformation">
             android:screenOrientation="portrait"</activity>
         <activity 
-            android:name=".Register">
+            android:name=".activity.Register">
             android:screenOrientation="portrait"</activity>
          <activity 
-            android:name=".WorkStation">  
+            android:name=".activity.WorkStation">
             android:screenOrientation="portrait"</activity>
          <activity 
             android:name="SendEmailActivity">

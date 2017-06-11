@@ -6,6 +6,11 @@ import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.media.MediaMetadataRetriever;
 
+import com.slwb.util.Parse;
+
+/**
+ * 缩略图
+ */
 public class Thumbnail {//略缩图
     private Bitmap picture;
     private MediaMetadataRetriever retriever;
@@ -13,6 +18,8 @@ public class Thumbnail {//略缩图
     private int seconds, num;
     private float interval = 4000;//提取帧的时间间隔，单位为毫秒
     private float intervalScale = 1.0f;//缩放比例
+
+    private Parse parse = new Parse();
 
     //
     public void setPath(String filepath) {
@@ -35,14 +42,13 @@ public class Thumbnail {//略缩图
 
     public Bitmap getThumbnail(String filename) {
 
-
         retriever = new MediaMetadataRetriever();
         retriever.setDataSource(filename);
         // 取得视频的长度(单位为毫秒)  
         String time = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
 
         // 取得视频的长度(单位为豪秒)
-        seconds = Integer.valueOf(time);
+        seconds = parse.parseString2Int(time);
         picture = retriever.getFrameAtTime(1, MediaMetadataRetriever.OPTION_CLOSEST);//获取第一秒的图片
         picture = zoomImage(picture);//将第一秒的图片的大小转换为160*90
 
@@ -72,7 +78,7 @@ public class Thumbnail {//略缩图
         retriever.setDataSource(filepath);
         String time = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
         //获得想要的毫秒
-        num = Integer.valueOf(time);
+        num = parse.parseString2Int(time);
         return num;
     }
 
@@ -87,7 +93,6 @@ public class Thumbnail {//略缩图
         int bgHeight = background.getHeight();
         //int bgHeight = 90;
         int fgWidth = foreground.getWidth();
-        int fgHeight = foreground.getHeight();
         //create the new blank bitmap 创建一个新的和SRC长度宽度一样的位图
         Bitmap newbmp = Bitmap.createBitmap(bgWidth + fgWidth, bgHeight, Config.RGB_565);
         Canvas cv = new Canvas(newbmp);

@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/box"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/box">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,29 +35,11 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <SurfaceView
+            android:id="@+id/surface_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="#000000">
-
-            <Button
-                android:id="@+id/play"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_margin="16dp"
-                android:background="@drawable/play0" />
-
-            <SurfaceView
-                android:id="@+id/showing"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true" />
-
-        </RelativeLayout>
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
         <RelativeLayout
             android:id="@+id/RelativeLayout2"
@@ -93,68 +75,51 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/editplane"
+        <com.slwb.supercut.ThumbnailView
+            android:id="@+id/thumbnailView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginBottom="15dp">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/frame">
-
-                <com.slwb.supercut.ThumbnailView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/thumbnailView"
-                    android:layout_gravity="center_vertical"></com.slwb.supercut.ThumbnailView>
-
-            </LinearLayout>
-
-        </RelativeLayout>
+        </com.slwb.supercut.ThumbnailView>
 
     </LinearLayout>
 
     <RelativeLayout
+        android:id="@+id/tools"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:id="@+id/tools"
         android:layout_alignParentBottom="true"
         android:gravity="bottom">
 
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/helpLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/helpLayout">
+        android:layout_centerVertical="true">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
+                android:id="@+id/editText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText"
-                android:text="返回"
-                android:textSize="18sp"
-                android:textIsSelectable="false"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="40dp"
-                android:textColor="#ffffff" />
+                android:text="返回"
+                android:textColor="#ffffff"
+                android:textIsSelectable="false"
+                android:textSize="18sp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -163,11 +128,11 @@
                 android:gravity="center">
 
                 <TextView
+                    android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="视频预览区"
-                    android:id="@+id/textView"
                     android:layout_centerHorizontal="true"
+                    android:text="视频预览区"
                     android:textColor="#ffffff"
                     android:textSize="18sp" />
             </RelativeLayout>
@@ -175,55 +140,43 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
+                android:layout_marginRight="10dp"
+                android:layout_weight="1">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="选择素材"
                     android:id="@+id/textView2"
-                    android:textColor="#ffffff"
-                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:text="选择素材"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="视频条展示区,长按端点可剪辑,红色表示剪辑掉的视频"
                     android:id="@+id/textView4"
-                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="视频条展示区,长按端点可剪辑,红色表示剪辑掉的视频"
                     android:textColor="#ffffff"
                     android:textSize="18sp" />
 
                 <TextView
+                    android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="输出mp4"
-                    android:id="@+id/textView5"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="输出mp4"
                     android:textColor="#ffffff"
                     android:textSize="18sp" />
 
             </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true">
-
-                </RelativeLayout>
-            </RelativeLayout>
         </LinearLayout>
 
     </RelativeLayout>
